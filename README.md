@@ -1,4 +1,6 @@
-Weather App
+ Weather App
+
+
 A modern, responsive web application built with HTML, CSS, and JavaScript that provides real-time weather information using the OpenWeatherMap API. The app allows users to view current weather, a 5-day forecast, manage weather-related tasks, save favorite cities, track search history, toggle temperature units, and receive basic weather alerts.
 Features
 
