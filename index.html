@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="main-container">
+            <div class="header">
+                <h1>Weather App</h1>
+                <div class="header-controls">
+                    <button id="unitToggle" class="unit-toggle">°C</button>
+                    <label class="theme-toggle">
+                        <input type="checkbox" id="themeToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Search Section -->
+            <div class="search-section">
+                <div class="search-container">
+                    <input type="text" id="cityInput" class="search-input" placeholder="Enter city name...">
+                </div>
+                <button id="searchBtn" class="search-btn">🔍</button>
+                <button id="locationBtn" class="location-btn">📍</button>
+            </div>
+
+            <!-- Search History -->
+            <div class="search-history">
+                <div id="searchHistory" class="history-list"></div>
+            </div>
+
+            <!-- Favorites -->
+            <div class="favorites-container">
+                <div id="favoritesList" class="favorites-list"></div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="nav-tabs">
+                <button class="nav-tab active" data-tab="current">Current</button>
+                <button class="nav-tab" data-tab="forecast">Forecast</button>
+                <button class="nav-tab" data-tab="tasks">Tasks</button>
+                <button class="nav-tab" data-tab="alerts">Alerts</button>
+            </div>
+
+            <!-- Current Weather -->
+            <div id="currentTab" class="tab-content active">
+                <div id="currentWeather" class="current-weather">
+                    <h2 id="cityNameText"></h2>
+                    <button id="addFavorite" class="add-favorite">★</button>
+                    <img id="weatherIcon" class="weather-icon" src="" alt="">
+                    <div id="temperature" class="temperature"></div>
+                    <div id="weatherCondition" class="weather-condition"></div>
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Feels Like</div>
+                            <div class="detail-value" id="feelsLike"></div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Humidity</div>
+                            <div class="detail-value" id="humidity"></div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Wind Speed</div>
+                            <div class="detail-value" id="windSpeed"></div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Pressure</div>
+                            <div class="detail-value" id="pressure"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Forecast -->
+            <div id="forecastTab" class="tab-content">
+                <div id="forecastContainer" class="forecast-container"></div>
+            </div>
+
+            <!-- Tasks -->
+            <div id="tasksTab" class="tab-content">
+                <div class="task-input">
+                    <input type="text" id="taskInput" placeholder="Add a new task..." maxlength="100">
+                    <button id="addTaskBtn">Add Task</button>
+                </div>
+                <ul id="taskList" class="task-list"></ul>
+            </div>
+
+            <!-- Alerts -->
+            <div id="alertsTab" class="tab-content">
+                <div id="alertsContainer" class="alerts-container"></div>
+            </div>
+
+            <!-- Loading and Error -->
+            <div id="loading" class="loading">
+                <div class="spinner"></div>Loading weather data...
+            </div>
+            <div id="errorMessage" class="error-message"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
